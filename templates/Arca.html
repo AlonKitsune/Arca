@@ -1,0 +1,84 @@
+<!-- Hecho por Diego Aaron Ortiz Loperena :D -->
+ <!-- y Gutiérrez Villalobos José Alfredo -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="{{ url_for('static', filename='img/icono.png') }}" type="image">  
+  <meta charset="UTF-8">
+  <title>Arca del conocimiento</title>
+  <style>
+    body {
+      background: url('static/img/biblioteca.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      font-family: 'Courier New', monospace;
+      color: #000000;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+      border-bottom: 5px solid #5c3a21;
+      padding-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.6); 
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+
+    .descripcion {
+      margin: 10px auto 30px;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #5c3a21;
+      font-size: 20px;
+      border: 1px solid #5c3a21;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.8);
+      display: block;
+    }
+
+    a:hover {
+      background: #f4e2d0;
+    }
+  </style>
+</head>
+<body>
+  <div class="encabezado">
+  <h1>Biblioteca Digital:</h1>
+
+  <div class="descripcion">
+    Esta biblioteca digital está diseñada para preservar y compartir conocimientos esenciales sobre agricultura, medicina, energía, ciencia, historia y más. Su propósito es servir como una herramienta educativa y de supervivencia en caso de emergencias o colapsos.
+  </div>
+
+<div class="grid">
+  <a href="{{ url_for('categoria', nombre_categoria='Agricultura') }}">Agricultura</a>
+  <a href="{{ url_for('categoria', nombre_categoria='Medicina') }}">Medicina</a>
+  <a href="{{ url_for('categoria', nombre_categoria='Energia') }}">Energía</a>
+  <a href="{{ url_for('categoria', nombre_categoria='Ciencia') }}">Ciencia</a>
+  <a href="{{ url_for('categoria', nombre_categoria='Historia') }}">Historia</a>
+  <a href="#">[Espacio reservado]</a>
+</div>
+  </div>
+</body>
+</html>

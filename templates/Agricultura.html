@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agricultura - Arca del Conocimiento</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("{{ url_for('static', filename='img/Agricultura.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      font-family: 'Courier New', monospace;
+      color: #2b2b2b;
+      text-align: center;
+    }
+
+    .cabecera {
+      background-color: rgb(28, 66, 9);
+      color: white;
+      padding: 50px 20px 30px 20px;
+    }
+
+    .cabecera h1 {
+      font-size: 40px;
+      margin: 0 0 20px 0;
+    }
+
+    .descripcion {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .libros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .libro {
+      background: rgb(209, 251, 206);
+      border: 1px solid #073802;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .libro:hover {
+      background: #8cdd89;
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 20px;
+    }
+
+    .volver {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #5c3a21;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #5c3a21;
+      font-size: 18px;
+    }
+
+    .volver:hover {
+      background: #f4e2d0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cabecera">
+    <h1>Agricultura</h1>
+    <div class="descripcion">
+      Esta sección contiene recursos esenciales relacionados con prácticas agrícolas sostenibles, técnicas de cultivo y preservación de alimentos.
+    </div>
+  </div>
+
+  <div class="libros">
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Agricultura/El Libro de los cuidadores de Semillas.pdf') }}" target="_blank">El Libro de los cuidadores de Semillas</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Agricultura/Enciclopedia de las Plagas y Enfermedades de las Plantas.pdf') }}" target="_blank">Plagas y Enfermedades de las Plantas</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Agricultura/Guia Practica De La Vida Autosuficiente.pdf') }}" target="_blank">Guia Practica De La Vida Autosuficiente</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Agricultura/Guía práctica ilustrada para la vida en el campo.pdf') }}" target="_blank">Guía práctica ilustrada para la vida en el campo</a>
+    </div>
+        <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Agricultura/La Vida Secreta de las Plantas.pdf') }}" target="_blank">La Vida Secreta de las Plantas</a>
+    </div>
+        <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Agricultura/Manual práctico de agricultura orgánica sostenible.pdf') }}" target="_blank">Manual práctico de agricultura orgánica sostenible</a>
+    </div>
+  </div>
+
+  <a class="volver" href="{{ url_for('arca') }}">🔙 Regresar al Inicio</a>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Energia - Arca del Conocimiento</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("{{ url_for('static', filename='img/Energia.jpg') }}");      background-size: cover;
+      background-position: center;
+      font-family: 'Courier New', monospace;
+      color: #2b2b2b;
+      text-align: center;
+    }
+
+    .cabecera {
+      background-color: rgb(140, 131, 12);
+      color: white;
+      padding: 50px 20px 30px 20px;
+    }
+
+    .cabecera h1 {
+      font-size: 40px;
+      margin: 0 0 20px 0;
+    }
+
+    .descripcion {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .libros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .libro {
+      background: rgb(248, 248, 165);
+      border: 1px solid #81790f;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .libro:hover {
+      background: #cbc02c;
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 20px;
+    }
+
+    .volver {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #5c3a21;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #5c3a21;
+      font-size: 18px;
+    }
+
+    .volver:hover {
+      background: #f4e2d0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cabecera">
+    <h1>Energia</h1>
+    <div class="descripcion">
+      Esta sección contiene recursos esenciales relacionados a la creacion y uso de la energia, forma de producirla, almacenarla y multiples usos que se le pude dar.
+    </div>
+  </div>
+
+  <div class="libros">
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Energia/Electricidad I - Teoría Básica y Prácticas.pdf') }}" target="_blank">Electricidad - Teoría Básica y Prácticas</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Energia/Energia Del Viento Y Diseño De Turbinas Eolicas.pdf') }}" target="_blank">Energia Del Viento Y Diseño De Turbinas Eolicas</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Energia/Energia Eolica.pdf') }}" target="_blank">Energia Eolica</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Energia/Energia Hidraulica y Eolica Practica.pdf') }}" target="_blank">Energia Hidraulica y Eolica Practica</a>
+    </div>
+        <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Energia/Energia Solar Fotovoltaica Manual Del Instalador.pdf') }}" target="_blank">Energia Solar Fotovoltaica Manual Del Instalador</a>
+    </div>
+        <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Energia/Ingeniería de la energía eólica.pdf') }}" target="_blank">Ingeniería de la energía eólica</a>
+    </div>
+  </div>
+
+  <a class="volver" href="{{ url_for('arca') }}">🔙 Regresar al Inicio</a>
+
+</body>
+</html>
