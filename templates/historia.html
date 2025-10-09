@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="icon" href="{{ url_for('static', filename='img/icono.png') }}" type="image">  
   <meta charset="UTF-8">
   <title>Historia - Arca del Conocimiento</title>
   <style>
@@ -8,7 +9,7 @@
       margin: 0;
       padding: 0;
       background: url("{{ url_for('static', filename='img/Historia.jpg') }}");      background-size: cover;
-      background-position: center;
+      background-position: under;
       font-family: 'Courier New', monospace;
       color: #2b2b2b;
       text-align: center;
@@ -96,17 +97,8 @@
       <a href="{{ url_for('static', filename='libros/Historia/Colapso.pdf') }}" target="_blank">Colapso</a>
     </div>
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Historia/Historia universal. vol. I.pdf') }}" target="_blank">Historia universal. vol. I</a>
+      <a href="{{ url_for('static', filename='libros/Historia/Sapiens.pdf') }}" target="_blank">Sapien</a>
     </div>
-    <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Historia/La gran cadena del ser.pdf') }}" target="_blank">La gran cadena del ser</a>
-    </div>
-        <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Historia/Las sabidurias de la antiguedad.pdf') }}" target="_blank">Las sabidurias de la antiguedad</a>
-    </div>
-        <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Historia/Sapiens.pdf') }}" target="_blank">Sapiens</a>
-    </div> 
   </div>
 
   <a class="volver" href="{{ url_for('arca') }}">🔙 Regresar al Inicio</a>
