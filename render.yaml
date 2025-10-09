@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: proyecto-arca-copia
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: MONGO_URI
+        value: "mongodb+srv://aaronloperena2809_db_user:pmKXBIvTCZo34oNV@cluster0.fj462vw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
