@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="icon" href="{{ url_for('static', filename='img/icono.png') }}" type="image">  
   <meta charset="UTF-8">
   <title>Ciencia - Arca del Conocimiento</title>
   <style>
@@ -8,7 +9,7 @@
       margin: 0;
       padding: 0;
       background: url("{{ url_for('static', filename='img/Planeta.jpg') }}");      background-size: cover;
-      background-position: center;
+      background-position: under;
       font-family: 'Courier New', monospace;
       color: #2b2b2b;
       text-align: center;
@@ -90,22 +91,13 @@
 
   <div class="libros">
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Ciencia/Ciencia y tecnología de materiales  problemas y cuestiones.pdf') }}" target="_blank">Ciencia y tecnología de materiales</a>
-    </div>
-    <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Ciencia/Electricidad y Electrónica Básicas Conceptos y Aplicaciones.pdf') }}" target="_blank">Electricidad y Electrónica básicas</a>
-    </div>
-    <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Ciencia/Física universitaria con Física Moderna 1.pdf') }}" target="_blank">Física Moderna</a>
-    </div>
-    <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Ciencia/Ingenieria mecanica Dinamica.pdf') }}" target="_blank">Ingenieria mecanica Dinamica</a>
-    </div>
-        <div class="libro">
       <a href="{{ url_for('static', filename='libros/Ciencia/Matemáticas básicas.pdf') }}" target="_blank">Matemáticas básicas</a>
     </div>
-        <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Ciencia/Principios esenciales de química general.pdf') }}" target="_blank">Principios esenciales de química general</a>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Ciencia/Principios esenciales de química general (Raymond Chang).pdf') }}" target="_blank">Principios esenciales de quimica</a>
+    </div>
+    <div class="libro">
+      <a href="{{ url_for('static', filename='libros/Ciencia/Física (José Mateo Torres, Víctor Canchos López) (Z-Library).pdf') }}" target="_blank">Física Moderna</a>
     </div>
   </div>
 
