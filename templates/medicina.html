@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="icon" href="{{ url_for('static', filename='img/icono.png') }}" type="image">  
   <meta charset="UTF-8">
   <title>Medicina - Arca del Conocimiento</title>
   <style>
@@ -8,7 +9,7 @@
       margin: 0;
       padding: 0;
       background: url("{{ url_for('static', filename='img/Hospital.jpg') }}");      background-size: cover;
-      background-position: center;
+      background-position: under;
       font-family: 'Courier New', monospace;
       color: #2b2b2b;
       text-align: center;
@@ -90,21 +91,12 @@
 
   <div class="libros">
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Medicina/Donde no hay dentistas.pdf') }}" target="_blank">Donde no hay dentistas</a>
-    </div>
-    <div class="libro">
       <a href="{{ url_for('static', filename='libros/Medicina/Donde no hay doctores.pdf') }}" target="_blank">Donde no hay doctores</a>
     </div>
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Medicina/Enciclopedia de plantas medicinales  550 hierbas y remedios para dolencias comunes.pdf') }}" target="_blank">Enciclopedia de plantas medicinales</a>
+      <a href="{{ url_for('static', filename='libros/Medicina/Enciclopedia de Plantas Medicinales (Penélope Ody).pdf') }}" target="_blank">Enciclopedia de Plantas Medicinales</a>
     </div>
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Medicina/Harrison manual de medicina.pdf') }}" target="_blank">Harrison manual de medicina</a>
-    </div>
-        <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Medicina/Plantas medicinales la realidad de una tradición ancestral.pdf') }}" target="_blank">Plantas medicinales Mexicanas</a>
-    </div>
-        <div class="libro">
       <a href="{{ url_for('static', filename='libros/Medicina/Primeros auxilios.pdf') }}" target="_blank">Primeros auxilios</a>
     </div>
   </div>
