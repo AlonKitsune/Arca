@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="icon" href="{{ url_for('static', filename='img/icono.png') }}" type="image">  
   <meta charset="UTF-8">
   <title>Energia - Arca del Conocimiento</title>
   <style>
@@ -8,7 +9,7 @@
       margin: 0;
       padding: 0;
       background: url("{{ url_for('static', filename='img/Energia.jpg') }}");      background-size: cover;
-      background-position: center;
+      background-position: under;
       font-family: 'Courier New', monospace;
       color: #2b2b2b;
       text-align: center;
@@ -90,22 +91,13 @@
 
   <div class="libros">
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Energia/Electricidad I - Teoría Básica y Prácticas.pdf') }}" target="_blank">Electricidad - Teoría Básica y Prácticas</a>
+      <a href="{{ url_for('static', filename='libros/Energia/Electricidad I - Teoría Básica y Prácticas (J.J. Manzano Orrego).pdf') }}" target="_blank">Electricidad - Teoría Básica y Prácticas</a>
     </div>
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Energia/Energia Del Viento Y Diseño De Turbinas Eolicas.pdf') }}" target="_blank">Energia Del Viento Y Diseño De Turbinas Eolicas</a>
+      <a href="{{ url_for('static', filename='libros/Energia/Energia Hidraulica y Eolica Practica.pdf') }}" target="_blank">Energia Hidraulica y Eolica</a>
     </div>
     <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Energia/Energia Eolica.pdf') }}" target="_blank">Energia Eolica</a>
-    </div>
-    <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Energia/Energia Hidraulica y Eolica Practica.pdf') }}" target="_blank">Energia Hidraulica y Eolica Practica</a>
-    </div>
-        <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Energia/Energia Solar Fotovoltaica Manual Del Instalador.pdf') }}" target="_blank">Energia Solar Fotovoltaica Manual Del Instalador</a>
-    </div>
-        <div class="libro">
-      <a href="{{ url_for('static', filename='libros/Energia/Ingeniería de la energía eólica.pdf') }}" target="_blank">Ingeniería de la energía eólica</a>
+      <a href="{{ url_for('static', filename='libros/Energia/Energia_Eolica_-_Hnos_Urquia_1982_Completo.pdf') }}" target="_blank">Energia Eolica</a>
     </div>
   </div>
 
