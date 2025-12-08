@@ -25,22 +25,22 @@ def register():
         contrasena = request.form['contrasena']
 
         # ----------- VALIDACIONES -----------
-
+        
         # Nombre: solo letras/números, sin espacios, 3–100 caracteres
         if not re.match(r'^[A-Za-z0-9]{3,100}$', nombre):
-            return "❌ El nombre solo puede tener letras y números, sin espacios. Mínimo 3 y máximo 100 caracteres."
+            return render_template('error.html', mensaje='El nombre solo puede tener letras y números, sin espacios. Mínimo 3 y máximo 100 caracteres.')
 
         # Correo: sin &, $, sin espacios, 6–50 caracteres
         if not re.match(r'^[^\s&$]{6,50}$', correo):
-            return "❌ El correo no puede contener espacios ni símbolos como & o $. Mínimo 6 y máximo 50 caracteres."
+            return render_template('error.html', mensaje='El correo no puede contener espacios ni símbolos como & o $. Mínimo 6 y máximo 50 caracteres.')
 
         # Contraseña: sin espacios, 5–50 caracteres
         if not re.match(r'^\S{5,50}$', contrasena):
-            return "❌ La contraseña no puede contener espacios y debe tener entre 5 y 50 caracteres."
+            return render_template('error.html', mensaje='La contraseña no puede contener espacios y debe tener entre 5 y 50 caracteres.')
 
         # Evitar correos duplicados
         if usuarios_collection.find_one({'correo': correo}):
-            return "❌ El correo ya está registrado."
+            return render_template('error.html', mensaje='El correo ya está registrado.')
 
         # Guardar usuario
         usuarios_collection.insert_one({
@@ -90,3 +90,4 @@ def categoria(nombre_categoria):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
