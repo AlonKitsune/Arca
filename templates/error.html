@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Error</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("{{ url_for('static', filename='img/Bunker.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .error-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 25px;
+      border-radius: 15px;
+      width: 450px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .error-box h3 {
+      color: #b30000;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .error-box p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .btn-regresar {
+      padding: 10px 20px;
+      background-color: #5c3a21;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .btn-regresar:hover {
+      background-color: #7a4d2b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-box">
+    <h3>❌ Error</h3>
+    <p>{{ mensaje }}</p>
+
+    <!-- Botón para regresar -->
+    <a href="{{ url_for('register') }}" class="btn-regresar">Regresar</a>
+  </div>
+
+</body>
+</html>
